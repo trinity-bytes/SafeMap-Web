@@ -1,175 +1,182 @@
-# SafeMap Landing Page
+# Página de Aterrizaje SafeMap
 
-> 🚀 **Status: COMPLETED** - Production-ready landing page for SafeMap mobile security platform
+> 🚀 **Estado: COMPLETADO** - Página de aterrizaje lista para producción para la plataforma de seguridad móvil SafeMap.
 
-## 📋 Project Overview
+## 📋 Descripción General del Proyecto
 
-SafeMap is a university project for a mobile security platform that allows citizens to report incidents anonymously, visualize risk zones through real-time heat maps, and get safe routes using AI technology.
+SafeMap es un proyecto universitario para una plataforma de seguridad móvil que permite a los ciudadanos reportar incidentes de forma anónima, visualizar zonas de riesgo mediante mapas de calor en tiempo real y obtener rutas seguras utilizando tecnología de IA.
 
-## 🏗️ Technology Stack
+## 🏗️ Stack Tecnológico
 
 - **Framework**: Astro 5.8.1
-- **UI Library**: React 18
-- **Styling**: Tailwind CSS
-- **Language**: TypeScript
-- **Build Tool**: Vite
-- **Package Manager**: npm
+- **Biblioteca UI**: React 18
+- **Estilos**: Tailwind CSS
+- **Lenguaje**: TypeScript
+- **Herramienta de Build**: Vite
+- **Gestor de Paquetes**: npm
 
-## 🚀 Project Structure
+## 📁 Estructura del Proyecto
 
 ```text
-safemap-landing/
-├── public/                    # Static assets
-│   ├── avatars/              # Testimonial avatars (SVG)
-│   ├── js/                   # Client-side scripts
-│   ├── favicon.svg           # Site favicon
-│   ├── apple-touch-icon.svg  # iOS app icon
-│   ├── robots.txt            # SEO robots file
-│   └── site.webmanifest     # PWA manifest
+SafeMap-Web/
+├── public/                    # Activos estáticos
+│   ├── avatars/              # Avatares para testimonios (SVG)
+│   ├── js/                   # Scripts del lado del cliente
+│   ├── favicon.svg           # Favicon del sitio
+│   ├── apple-touch-icon.svg  # Ícono de app para iOS
+│   ├── robots.txt            # Archivo robots para SEO
+│   └── site.webmanifest     # Manifiesto PWA
 ├── src/
 │   ├── components/
-│   │   ├── cards/           # Reusable card components
-│   │   ├── interactive/     # React interactive components
-│   │   ├── layout/          # Header, Footer
-│   │   ├── sections/        # Page sections
-│   │   └── ui/             # UI elements
-│   ├── data/               # JSON data files
-│   ├── layouts/            # Page layouts
-│   ├── pages/              # Astro pages
-│   └── styles/             # Global CSS
-├── astro.config.mjs        # Astro configuration
-└── tailwind.config.mjs     # Tailwind configuration
+│   │   ├── cards/           # Componentes de tarjeta reutilizables
+│   │   ├── interactive/     # Componentes interactivos de React
+│   │   ├── layout/          # Cabecera, Pie de página
+│   │   ├── sections/        # Secciones de la página
+│   │   └── ui/             # Elementos de UI
+│   ├── data/               # Archivos de datos JSON
+│   ├── layouts/            # Diseños de página
+│   ├── pages/              # Páginas Astro
+│   │   └── index.astro     # Página principal, por ejemplo
+│   └── styles/             # CSS Global
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # Flujo de trabajo para despliegue en GitHub Pages
+├── astro.config.mjs        # Configuración de Astro
+├── tailwind.config.mjs     # Configuración de Tailwind
+├── package.json            # Manifiesto del proyecto
+├── DEPLOYMENT.md           # Guía de despliegue
+└── README.md               # Este archivo
 ```
 
-│ └── index.astro
-└── package.json
+Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se expone como una ruta basada en el nombre de su archivo.
 
-````
+No hay nada especial sobre `src/components/`, pero ahí es donde nos gusta colocar cualquier componente de Astro/React/Vue/Svelte/Preact.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Cualquier activo estático, como imágenes, se puede colocar en el directorio `public/`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🧞 Comandos
 
-Any static assets, like images, can be placed in the `public/` directory.
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-## 🧞 Commands
+| Comando                   | Acción                                                     |
+| :------------------------ | :--------------------------------------------------------- |
+| `npm install`             | Instala las dependencias                                   |
+| `npm run dev`             | Inicia el servidor de desarrollo local en `localhost:4321` |
+| `npm run build`           | Compila tu sitio para producción en `./dist/`              |
+| `npm run preview`         | Previsualiza tu compilación localmente, antes de desplegar |
+| `npm run astro ...`       | Ejecuta comandos CLI como `astro add`, `astro check`       |
+| `npm run astro -- --help` | Obtiene ayuda usando el CLI de Astro                       |
 
-All commands are run from the root of the project, from a terminal:
+## ✨ Características Implementadas
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### 🎨 Diseño y Experiencia de Usuario
 
-## ✨ Features Implemented
+- Diseño moderno y responsivo con enfoque "mobile-first"
+- Diseño de Cuadrícula Bento interactiva mostrando características clave
+- Animaciones y transiciones de desplazamiento suaves
+- Esquema de colores y tipografía profesional
 
-### 🎨 Design & User Experience
-- Modern, responsive design with mobile-first approach
-- Interactive Bento Grid layout showcasing key features
-- Smooth scroll animations and transitions
-- Professional color scheme and typography
+### 🧩 Componentes Interactivos
 
-### 🧩 Interactive Components
-- **MapDemo**: Mock interactive map with incident markers and safe routes
-- **StatsCounter**: Animated real-time statistics display
-- **ContactForm**: Comprehensive beta registration form with validation
+- **MapDemo**: Maqueta de mapa interactivo con marcadores de incidentes y rutas seguras
+- **StatsCounter**: Visualización animada de estadísticas en tiempo real
+- **ContactForm**: Formulario completo de registro para beta con validación
 
-### 📱 Sections
-- **Hero**: Main value proposition with call-to-action
-- **Features**: Six key platform features with icons
-- **Testimonials**: Authority endorsements from security experts
-- **Pricing**: Three-tier pricing structure
-- **FAQ**: Comprehensive frequently asked questions
-- **Footer**: Complete site information and links
+### 📱 Secciones
 
-### 🔧 Technical Features
-- **SEO Optimized**: Meta tags, structured data, sitemap
-- **PWA Ready**: Web app manifest and offline capabilities
-- **Performance**: Code splitting, lazy loading, optimized bundles
-- **Accessibility**: WCAG 2.1 AA compliant
-- **TypeScript**: Full type safety throughout the project
+- **Hero**: Propuesta de valor principal con llamada a la acción
+- **Features**: Seis características clave de la plataforma con iconos
+- **Testimonials**: Respaldo de autoridades y expertos en seguridad
+- **Pricing**: Estructura de precios de tres niveles
+- **FAQ**: Preguntas frecuentes detalladas
+- **Footer**: Información completa del sitio y enlaces
 
-## 🚀 Quick Start
+### 🔧 Características Técnicas
 
-### Prerequisites
+- **Optimizado para SEO**: Meta tags, datos estructurados, sitemap
+- **Listo para PWA**: Manifiesto de aplicación web y capacidades offline
+- **Rendimiento**: División de código (code splitting), carga diferida (lazy loading), paquetes optimizados
+- **Accesibilidad**: Cumple con WCAG 2.1 AA
+- **TypeScript**: Seguridad de tipos completa en todo el proyecto
+
+## 🚀 Inicio Rápido
+
+### Prerrequisitos
+
 - Node.js 18+
-- npm or yarn
+- npm o yarn
 
-### Installation
+### Instalación
 
 ```bash
-# Clone the repository
-git clone [repository-url]
-cd safemap-landing
+# Clona el repositorio
+git clone https://github.com/trinity-bytes/SafeMap-Web.git
+cd SafeMap-Web
 
-# Install dependencies
+# Instala las dependencias
 npm install
 
-# Start development server
+# Inicia el servidor de desarrollo
 npm run dev
-````
-
-### Available Scripts
-
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run astro        # Run Astro CLI commands
 ```
 
-## 🌐 Deployment
+### Scripts Disponibles
 
-The project is production-ready and can be deployed to:
+```bash
+npm run dev          # Inicia el servidor de desarrollo
+npm run build        # Compila para producción
+npm run preview      # Previsualiza la compilación de producción
+npm run astro        # Ejecuta comandos CLI de Astro
+```
 
-- **Netlify** (Recommended)
+## 🌐 Despliegue
+
+El proyecto está listo para producción y se puede desplegar en:
+
+- **Netlify** (Recomendado)
 - **Vercel**
 - **GitHub Pages**
-- **Custom server**
+- **Servidor personalizado**
 
-See `DEPLOYMENT.md` for detailed deployment instructions.
+Consulta `DEPLOYMENT.md` para instrucciones detalladas de despliegue.
 
-## 📊 Performance
+## 📊 Rendimiento
 
-- **Bundle Size**: ~200KB gzipped
-- **Lighthouse Score**: 95-100 across all metrics
+- **Tamaño del Paquete**: ~200KB gzipped
+- **Puntuación Lighthouse**: 95-100 en todas las métricas
 - **First Contentful Paint**: <1.5s
 - **Time to Interactive**: <3.5s
 
-## 🎓 University Project
+## 🎓 Proyecto Universitario
 
-This landing page was developed as part of a university project for the "Diseño y Patrones de Software" course, demonstrating:
+Esta página de aterrizaje fue desarrollada como parte de un proyecto universitario para el curso "Diseño y Patrones de Software", demostrando:
 
-- Modern web development practices
-- Component-based architecture
-- Performance optimization techniques
-- Accessibility compliance
-- Professional documentation
+- Prácticas modernas de desarrollo web
+- Arquitectura basada en componentes
+- Técnicas de optimización del rendimiento
+- Cumplimiento de accesibilidad
+- Documentación profesional
 
-## 📚 Documentation
+## 📚 Documentación
 
-- `DEPLOYMENT.md` - Comprehensive deployment guide
-- `PROJECT-COMPLETION.md` - Detailed project completion report
-- Component documentation within source files
+- `DEPLOYMENT.md` - Guía de despliegue completa
+- `PROJECT-COMPLETION.md` - Informe detallado de finalización del proyecto (si existe)
+- Documentación de componentes dentro de los archivos fuente
 
-## 🤝 Contributing
+## 🤝 Contribuciones
 
-This is a university project, but feedback and suggestions are welcome:
+Este es un proyecto universitario, pero los comentarios y sugerencias son bienvenidos:
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+1. Haz un fork del repositorio
+2. Crea una rama para tu característica (`git checkout -b feature/AmazingFeature`)
+3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Haz push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-## 📄 License
+## 📄 Licencia
 
-This project is developed for educational purposes as part of university coursework.
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
 ---
 
-**Built with ❤️ using Astro, React, TypeScript, and Tailwind CSS**
+**Construido con ❤️ usando Astro, React, TypeScript y Tailwind CSS**
