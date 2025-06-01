@@ -1,0 +1,143 @@
+---
+import TestimonialCard from '@/components/cards/TestimonialCard.astro';
+---
+
+<section id="testimonios" class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Respaldo de Autoridades y Expertos
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        SafeMap cuenta con el apoyo de instituciones de seguridad, universidades 
+        y expertos en tecnología que reconocen su impacto positivo.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 fade-in">
+        <!-- Police Chief Testimonial -->
+      <TestimonialCard
+        quote="SafeMap ha revolucionado la manera en que recibimos y procesamos reportes ciudadanos. La información en tiempo real nos permite responder más eficientemente."
+        author="Comisario María Elena Vásquez"
+        position="Jefa de División de Seguridad Ciudadana"
+        organization="Policía Nacional del Perú"
+        avatar="/avatars/police-chief.svg"
+        verified={true}
+      />
+
+      <!-- Academic Testimonial -->
+      <TestimonialCard
+        quote="Los algoritmos de SafeMap representan un avance significativo en el uso de IA para seguridad urbana. Su enfoque de privacidad y eficacia es ejemplar."
+        author="Dr. Carlos Mendoza"
+        position="Director de Investigación en IA"
+        organization="Universidad Nacional de Ingeniería"
+        avatar="/avatars/professor.svg"
+        verified={true}
+      />
+
+      <!-- Municipality Testimonial -->
+      <TestimonialCard
+        quote="Desde que implementamos SafeMap en nuestro distrito, hemos visto una reducción del 35% en incidentes reportados y mayor participación ciudadana."
+        author="Alcalde Roberto Fernández"
+        position="Alcalde Distrital"
+        organization="Municipalidad de San Isidro"
+        avatar="/avatars/mayor.svg"
+        verified={true}
+      />
+
+      <!-- Tech Expert Testimonial -->
+      <TestimonialCard
+        quote="La arquitectura de SafeMap es impresionante. Combina lo mejor de la tecnología móvil con un diseño centrado en el usuario y la privacidad."
+        author="Ing. Ana Lucia Torres"
+        position="Lead Developer"
+        organization="Google Developer Expert"
+        avatar="/avatars/tech-expert.svg"
+        verified={true}
+      />
+
+      <!-- User Representative -->
+      <TestimonialCard
+        quote="Como representante de la sociedad civil, vemos en SafeMap una herramienta que empodera a los ciudadanos sin comprometer su seguridad personal."
+        author="Lic. Patricia Ramos"
+        position="Presidenta"
+        organization="Asociación de Vecinos Unidos"
+        avatar="/avatars/community-leader.svg"
+        verified={true}
+      />
+
+      <!-- Security Expert -->
+      <TestimonialCard
+        quote="SafeMap establece un nuevo estándar en aplicaciones de seguridad ciudadana. Su enfoque integral y tecnología probada lo convierten en una herramienta esencial."
+        author="General (r) Eduardo Sánchez"
+        position="Ex-Director General"
+        organization="Instituto Nacional de Defensa Civil"
+        avatar="/avatars/security-expert.svg"
+        verified={true}
+      />
+
+    </div>
+
+    <!-- Awards and Recognition -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+      <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">
+        Reconocimientos y Certificaciones
+      </h3>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+        <!-- Award 1 -->
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🏆</span>
+          </div>
+          <h4 class="font-semibold text-sm mb-1">Mejor App de Seguridad</h4>
+          <p class="text-xs text-gray-600">CONCYTEC 2024</p>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🛡️</span>
+          </div>
+          <h4 class="font-semibold text-sm mb-1">Certificación ISO 27001</h4>
+          <p class="text-xs text-gray-600">Seguridad de Datos</p>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🚀</span>
+          </div>
+          <h4 class="font-semibold text-sm mb-1">Startup del Año</h4>
+          <p class="text-xs text-gray-600">Lima Innovation Hub</p>
+        </div>
+
+        <!-- Award 4 -->
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🎯</span>
+          </div>
+          <h4 class="font-semibold text-sm mb-1">Impacto Social</h4>
+          <p class="text-xs text-gray-600">ODS 2030 - ONU</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistics from Testimonials -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="text-3xl font-bold text-primary-600 mb-2">100+</div>
+        <div class="text-gray-600">Autoridades que nos respaldan</div>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="text-3xl font-bold text-primary-600 mb-2">15</div>
+        <div class="text-gray-600">Distritos implementados</div>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="text-3xl font-bold text-primary-600 mb-2">98%</div>
+        <div class="text-gray-600">Satisfacción institucional</div>
+      </div>
+    </div>
+  </div>
+</section>

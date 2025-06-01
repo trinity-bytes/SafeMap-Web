@@ -1,0 +1,436 @@
+/* SafeMap Landing Page - Global Styles */
+
+/* Import Leaflet custom styles */
+@import "./leaflet-custom.css";
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================
+   GLOBAL FOUNDATIONS
+   =========================================== */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* Enhanced focus styles for accessibility */
+*:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* ===========================================
+   ANIMATIONS & KEYFRAMES
+   =========================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Scroll-triggered animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.blurred-fade {
+  filter: blur(4px);
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* ===========================================
+   COMPONENT UTILITIES
+   =========================================== */
+
+/* Loading states */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Section spacing utilities */
+.section-spacing {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .section-spacing {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Z-index management */
+.section-above {
+  position: relative;
+  z-index: 10;
+}
+
+.section-below {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================================
+   BUTTON ENHANCEMENTS
+   =========================================== */
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* ===========================================
+   GRADIENT BACKGROUNDS
+   =========================================== */
+
+.gradient-bg-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-bg-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-bg-success {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* ===========================================
+   LEAFLET MAP CUSTOMIZATIONS
+   =========================================== */
+
+/* Enhanced marker styles */
+.incident-marker {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  z-index: 1000 !important;
+}
+
+.incident-marker:hover {
+  z-index: 1010 !important;
+}
+
+.user-location-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.user-location-marker div {
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+/* Leaflet DivIcon fixes */
+.leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-marker-pane .leaflet-marker-icon {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Severity-based marker enhancements */
+.severity-high .incident-marker-container {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.6) !important;
+}
+
+.severity-medium .incident-marker-container {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6) !important;
+}
+
+.severity-low .incident-marker-container {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 8px rgba(234, 179, 8, 0.6) !important;
+}
+
+/* ===========================================
+   RESPONSIVE UTILITIES
+   =========================================== */
+
+/* Mobile-first responsive text */
+@media (max-width: 640px) {
+  .responsive-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .responsive-text-lg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-text-lg {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+/* Container improvements */
+.container-fluid {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===========================================
+   FORM ENHANCEMENTS
+   =========================================== */
+
+.form-field {
+  position: relative;
+}
+
+.form-field input:focus + label,
+.form-field input:not(:placeholder-shown) + label {
+  transform: translateY(-1.5rem) scale(0.8);
+  color: #2563eb;
+}
+
+.form-field label {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+  color: #6b7280;
+}
+
+/* ===========================================
+   CARD COMPONENT STYLES
+   =========================================== */
+
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* ===========================================
+   ACCESSIBILITY ENHANCEMENTS
+   =========================================== */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-gray-600 {
+    color: #000000;
+  }
+
+  .bg-gray-100 {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-on-scroll {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.focus-visible:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* ===========================================
+   PRODUCTION OPTIMIZATIONS
+   =========================================== */
+
+/* Hardware acceleration for smooth animations */
+.animate-on-scroll,
+.card:hover,
+.btn-primary {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Contain layout shifts */
+.container,
+.section {
+  contain: layout;
+}
+
+/* ===========================================
+   PRINT STYLES
+   =========================================== */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}

@@ -1,0 +1,15 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="32" fill="#2563eb"/>
+  <rect x="20" y="20" width="140" height="140" rx="20" fill="white" fill-opacity="0.1"/>
+  
+  <!-- Shield icon -->
+  <path d="M90 40L70 50V80C70 95 75 105 90 110C105 105 110 95 110 80V50L90 40Z" fill="white"/>
+  
+  <!-- Map pin -->
+  <circle cx="90" cy="100" r="15" fill="#22c55e"/>
+  <circle cx="90" cy="100" r="8" fill="white"/>
+  
+  <!-- Route lines -->
+  <path d="M60 130C70 125 80 135 90 130C100 135 110 125 120 130" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M50 140C65 138 75 142 90 140C105 142 115 138 130 140" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>

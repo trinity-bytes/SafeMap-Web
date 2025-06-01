@@ -1,0 +1,140 @@
+---
+import FeatureCard from '@/components/cards/FeatureCard.astro';
+---
+
+<section id="caracteristicas" class="py-24 bg-white relative z-0">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">    <!-- Section Header -->
+    <div class="text-center mb-16 animate-on-scroll-trigger blurred-fade">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-delay="0">
+        Características que Marcan la Diferencia
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-delay="200">
+        SafeMap combina tecnología avanzada con simplicidad de uso para crear 
+        la experiencia de seguridad más completa y efectiva.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-on-scroll-trigger blurred-fade" data-delay="400">
+      
+      <!-- Feature 1: AI Routes -->
+      <FeatureCard
+        icon="🧠"
+        title="Inteligencia Artificial Avanzada"
+        description="Algoritmos de machine learning analizan patrones de criminalidad en tiempo real para sugerir las rutas más seguras basadas en datos históricos y actuales."
+        features={[
+          "Análisis predictivo de riesgos",
+          "Optimización de rutas en tiempo real",
+          "Aprendizaje continuo del sistema"
+        ]}
+        gradient="from-blue-500 to-indigo-600"
+      />
+
+      <!-- Feature 2: Anonymous Reports -->
+      <FeatureCard
+        icon="🔒"
+        title="Reportes 100% Anónimos"
+        description="Sistema de anonimización multicapa que protege tu identidad mientras contribuyes a la seguridad de tu comunidad de manera completamente confidencial."
+        features={[
+          "Encriptación de extremo a extremo",
+          "Sin rastreo de ubicación personal",
+          "Datos anonimizados automáticamente"
+        ]}
+        gradient="from-emerald-500 to-teal-600"
+      />
+
+      <!-- Feature 3: Real-time Monitoring -->
+      <FeatureCard
+        icon="📡"
+        title="Monitoreo en Tiempo Real"
+        description="Seguimiento continuo de incidentes y actualizaciones instantáneas del mapa de calor para mantenerte informado de los cambios en tu entorno."
+        features={[
+          "Alertas push instantáneas",
+          "Mapas de calor dinámicos",
+          "Cobertura 24/7"
+        ]}
+        gradient="from-purple-500 to-pink-600"
+      />
+
+      <!-- Feature 4: Community Driven -->
+      <FeatureCard
+        icon="👥"
+        title="Impulsado por la Comunidad"
+        description="La fuerza de SafeMap viene de su comunidad. Cada reporte contribuye a crear un ambiente más seguro para todos los ciudadanos."
+        features={[
+          "Red colaborativa de usuarios",
+          "Verificación comunitaria",
+          "Gamificación responsable"
+        ]}
+        gradient="from-orange-500 to-red-500"
+      />
+
+      <!-- Feature 5: Multi-platform -->
+      <FeatureCard
+        icon="📱"
+        title="Multiplataforma y Accesible"
+        description="Disponible en iOS, Android y web. Interfaz intuitiva diseñada para ser utilizada por personas de todas las edades y niveles tecnológicos."
+        features={[
+          "Compatibilidad universal",
+          "Diseño inclusivo y accesible",
+          "Sincronización automática"
+        ]}
+        gradient="from-cyan-500 to-blue-600"
+      />
+
+      <!-- Feature 6: Emergency Integration -->
+      <FeatureCard
+        icon="🚨"
+        title="Integración con Emergencias"
+        description="Conexión directa con servicios de emergencia locales y sistema de alertas que puede activar respuesta rápida cuando sea necesario."
+        features={[
+          "Botón de pánico integrado",
+          "Geolocalización de emergencias",
+          "Coordinación con autoridades"
+        ]}
+        gradient="from-red-500 to-rose-600"
+      />
+
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="mt-20 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl md:text-4xl font-bold mb-2">98%</div>
+          <div class="text-sm md:text-base opacity-90">Precisión en predicciones</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold mb-2">&lt;30s</div>
+          <div class="text-sm md:text-base opacity-90">Tiempo de respuesta</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold mb-2">45%</div>
+          <div class="text-sm md:text-base opacity-90">Reducción de incidentes</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold mb-2">50K+</div>
+          <div class="text-sm md:text-base opacity-90">Usuarios activos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">
+        ¿Listo para experimentar la seguridad del futuro?
+      </h3>
+      <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+        Únete a miles de ciudadanos que ya están usando SafeMap para navegar 
+        de manera más segura e inteligente por su ciudad.
+      </p>      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#precios" class="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-center">
+          Descargar Aplicación
+        </a>
+        <a href="#demo" class="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-all duration-300 text-center inline-block">
+          Ver Demo en Vivo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,81 @@
+---
+export interface Props {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  buttonText: string;
+  buttonVariant: 'primary' | 'secondary' | 'outline';
+  popular?: boolean;
+  buttonHref?: string;
+}
+
+const { 
+  name, 
+  price, 
+  period, 
+  description, 
+  features, 
+  buttonText, 
+  buttonVariant,
+  popular = false,
+  buttonHref = '#' 
+} = Astro.props;
+
+const buttonClasses = {
+  primary: 'bg-gradient-to-r from-primary-600 to-purple-600 text-white hover:shadow-lg transform hover:scale-105',
+  secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
+  outline: 'border-2 border-primary-600 text-primary-600 hover:bg-primary-50'
+};
+---
+
+<div class={`relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${popular ? 'border-2 border-primary-500 overflow-hidden' : ''}`}>
+  
+  <!-- Popular Badge -->
+  {popular && (
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 translate-y-2 z-20">
+      <div class="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+        Más Popular
+      </div>
+    </div>
+  )}
+
+  <div class="p-8 pt-12 relative z-10">
+    <!-- Plan Name -->
+    <h3 class="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
+    
+    <!-- Price -->
+    <div class="mb-4">
+      <span class="text-4xl font-bold text-gray-900">{price}</span>
+      <span class="text-gray-600 ml-2">{period}</span>
+    </div>
+    
+    <!-- Description -->
+    <p class="text-gray-600 mb-6 leading-relaxed">
+      {description}
+    </p>
+    
+    <!-- Features -->
+    <ul class="space-y-3 mb-8">
+      {features.map((feature) => (
+        <li class="flex items-start space-x-3">
+          <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-sm text-gray-700">{feature}</span>
+        </li>
+      ))}
+    </ul>
+    
+    <!-- CTA Button -->
+    <a href={buttonHref} class={`w-full block py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center ${buttonClasses[buttonVariant]}`}>
+      {buttonText}
+    </a>
+  </div>
+
+  <!-- Background Pattern for Popular Plan -->
+  {popular && (
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-50 to-purple-50 pointer-events-none z-0"></div>
+  )}
+</div>

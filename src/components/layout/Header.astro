@@ -1,0 +1,101 @@
+---
+// Header component basado en JSConf España y MiduFest patterns
+---
+
+<header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-[1000] border-b border-gray-200">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo - Basado en especificaciones -->
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <span class="text-xl font-bold text-gray-900">SafeMap</span>
+      </div>      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#inicio" class="text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium">Inicio</a>
+        <a href="#demo" class="text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium">Demo</a>
+        <a href="#caracteristicas" class="text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium">Características</a>
+        <a href="#impacto" class="text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium">Impacto</a>
+        <a href="#testimonios" class="text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium">Testimonios</a>
+        <a href="#precios" class="text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium">Precios</a>
+      </div>      <!-- CTAs -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="#registro" class="px-6 py-2.5 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-lg hover:opacity-90 transition-opacity duration-200 font-medium inline-flex items-center">          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          Únete a la Beta
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="md:hidden p-2 text-gray-600 hover:text-gray-900" id="mobile-menu-button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>    <!-- Mobile Navigation -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="pt-4 pb-3 space-y-1 border-t border-gray-200 mt-4">        <a href="#inicio" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Inicio</a>
+        <a href="#demo" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Demo</a>
+        <a href="#caracteristicas" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Características</a>
+        <a href="#impacto" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Impacto</a>
+        <a href="#testimonios" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Testimonios</a>
+        <a href="#precios" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Precios</a>
+        
+        <div class="pt-3 mt-3 border-t border-gray-200">
+          <a href="#registro" class="block w-full text-center px-4 py-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity">
+            Únete a la Beta
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle and smooth scroll optimization
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    
+    // Mobile menu functionality
+    button?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+
+    // Smooth scroll for navigation links
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href !== '#') {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            // Close mobile menu if open
+            menu?.classList.add('hidden');
+          }
+        }
+      });
+    });
+
+    // Header background on scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header?.classList.add('bg-white/95');
+        header?.classList.remove('bg-white/90');
+      } else {
+        header?.classList.add('bg-white/90');
+        header?.classList.remove('bg-white/95');
+      }
+    });
+  });
+</script>

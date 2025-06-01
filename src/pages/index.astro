@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/Hero.astro';
+import MapDemoSection from '@/components/sections/MapDemoSection.astro';
+import BentoGrid from '@/components/sections/BentoGrid.astro';
+import Features from '@/components/sections/Features.astro';
+import Testimonials from '@/components/sections/Testimonials.astro';
+import Pricing from '@/components/sections/Pricing.astro';
+import FAQ from '@/components/sections/FAQ.astro';
+import Footer from '@/components/layout/Footer.astro';
+---
+
+<BaseLayout 
+  title="SafeMap - Navega Seguro con IA"
+  description="Plataforma móvil de seguridad ciudadana que permite reportar incidentes anónimamente y obtener rutas seguras con IA en tiempo real."
+>
+  <Header />
+  <main>
+    <Hero />
+    <MapDemoSection />
+    <Features />
+    <BentoGrid />
+    <Testimonials />
+    <Pricing />
+    <FAQ />
+  </main>
+  <Footer />
+</BaseLayout>

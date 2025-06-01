@@ -1,0 +1,170 @@
+---
+import PricingCard from '@/components/cards/PricingCard.astro';
+import ContactForm from '@/components/interactive/ContactForm';
+---
+
+<section id="precios" class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">    <!-- Section Header -->
+    <div class="text-center mb-16 animate-on-scroll-trigger blurred-fade">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-delay="0">
+        Planes que se Adaptan a Ti
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-delay="200">
+        Desde ciudadanos individuales hasta grandes empresas, 
+        SafeMap tiene el plan perfecto para tus necesidades de seguridad.
+      </p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 animate-on-scroll-trigger blurred-fade" data-delay="400">
+      
+      <!-- Free Plan -->
+      <PricingCard
+        name="SafeMap Gratuito"
+        price="S/. 0"
+        period="para siempre"
+        description="Perfecto para ciudadanos que quieren empezar a navegar de manera más segura."
+        features={[
+          "Reportes básicos de incidentes",
+          "Visualización de mapas de calor",
+          "Rutas seguras estándar",
+          "Alertas de seguridad generales",
+          "Comunidad SafeMap",
+          "Soporte por email"
+        ]}
+        buttonText="Descargar Gratis"
+        buttonVariant="secondary"
+        buttonHref="#registro"
+        popular={false}
+      />
+
+      <!-- Premium Plan -->
+      <PricingCard
+        name="SafeMap Premium"
+        price="S/. 9.90"
+        period="por mes"
+        description="Para usuarios que necesitan funciones avanzadas y personalización completa."
+        features={[
+          "Todo lo de Gratuito",
+          "Alertas push personalizadas",
+          "Rutas optimizadas con IA avanzada",
+          "Estadísticas detalladas del área",
+          "Historial de rutas y reportes",
+          "Acceso prioritario a nuevas funciones",
+          "Soporte técnico preferencial",
+          "Sin publicidad"
+        ]}
+        buttonText="Probar 30 días gratis"
+        buttonVariant="primary"
+        popular={true}
+      />
+
+      <!-- Business Plan -->
+      <PricingCard
+        name="SafeMap Business"
+        price="Personalizado"
+        period="contactar ventas"
+        description="Solución completa para empresas, instituciones y organizaciones."
+        features={[
+          "Todo lo de Premium",
+          "Tablero de control empresarial",
+          "API de integración completa",
+          "Reportes y analytics avanzados",
+          "Geofencing personalizado",
+          "Múltiples usuarios y administradores",
+          "SLA garantizado",
+          "Soporte 24/7 dedicado",
+          "Capacitación y onboarding"
+        ]}
+        buttonText="Contactar Ventas"
+        buttonVariant="outline"
+        popular={false}
+      />
+
+    </div>
+
+    <!-- Beta Registration Section -->
+    <div id="registro" class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        
+        <!-- Left Side - Information -->
+        <div class="bg-gradient-to-br from-primary-600 to-purple-600 text-white p-8 lg:p-12">
+          <h3 class="text-3xl font-bold mb-6">
+            Únete a la Beta Exclusiva
+          </h3>
+          <p class="text-lg mb-8 opacity-90">
+            Sé parte de los primeros en probar SafeMap y ayúdanos a crear 
+            la plataforma de seguridad más avanzada del país.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Acceso anticipado a todas las funciones</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Influencia directa en el desarrollo</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Descuentos exclusivos al lanzamiento</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Soporte directo del equipo de desarrollo</span>
+            </div>
+          </div>
+
+          <div class="mt-8 p-4 bg-white/10 backdrop-blur-sm rounded-lg">
+            <div class="text-sm opacity-90 mb-2">Beta testers actuales:</div>
+            <div class="text-2xl font-bold">2,847 usuarios</div>
+          </div>
+        </div>
+
+        <!-- Right Side - Form -->
+        <div class="p-8 lg:p-12">
+          <ContactForm client:load />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Frequently Asked Questions about Pricing -->
+    <div class="mt-16 text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-8">
+        Preguntas Frecuentes sobre Precios
+      </h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="text-left">
+          <h4 class="font-semibold text-gray-900 mb-2">¿Puedo cambiar de plan en cualquier momento?</h4>
+          <p class="text-gray-600 text-sm">Sí, puedes actualizar o degradar tu plan cuando gustes. Los cambios se aplican inmediatamente.</p>
+        </div>
+        
+        <div class="text-left">
+          <h4 class="font-semibold text-gray-900 mb-2">¿Hay compromisos a largo plazo?</h4>
+          <p class="text-gray-600 text-sm">No, todos nuestros planes son mensuales sin compromiso. Puedes cancelar cuando quieras.</p>
+        </div>
+        
+        <div class="text-left">
+          <h4 class="font-semibold text-gray-900 mb-2">¿Ofrecen descuentos por volumen?</h4>
+          <p class="text-gray-600 text-sm">Sí, para organizaciones con más de 100 usuarios ofrecemos descuentos especiales.</p>
+        </div>
+        
+        <div class="text-left">
+          <h4 class="font-semibold text-gray-900 mb-2">¿Los datos se mantienen al cambiar de plan?</h4>
+          <p class="text-gray-600 text-sm">Absolutamente. Todos tus datos y configuraciones se mantienen independientemente del plan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

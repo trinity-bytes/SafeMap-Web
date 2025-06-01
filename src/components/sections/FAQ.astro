@@ -1,0 +1,90 @@
+---
+import FAQItem from '@/components/ui/FAQItem.astro';
+---
+
+<section id="faq" class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">    <!-- Section Header -->
+    <div class="text-center mb-16 animate-on-scroll-trigger blurred-fade">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-delay="0">
+        Preguntas Frecuentes
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-delay="200">
+        Resolvemos todas tus dudas sobre SafeMap, su funcionamiento, 
+        seguridad y beneficios para la comunidad.
+      </p>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-6 animate-on-scroll-trigger blurred-fade" data-delay="400">
+      
+      <FAQItem
+        question="¿Cómo funciona el sistema de anonimato de SafeMap?"
+        answer="SafeMap utiliza un sistema de anonimización multicapa que incluye encriptación de extremo a extremo, eliminación automática de metadatos identificables y técnicas de ofuscación de datos. Tu ubicación se procesa de manera agregada sin vincularla a tu identidad personal. Incluso nosotros no podemos rastrear quién hizo qué reporte específico."
+      />
+
+      <FAQItem
+        question="¿SafeMap comparte mis datos con las autoridades?"
+        answer="SafeMap solo comparte datos estadísticos y patrones agregados con las autoridades, nunca información personal identificable. Los reportes individuales se procesan de manera anónima y se convierten en datos estadísticos que ayudan a mejorar la seguridad sin comprometer tu privacidad. Cumplimos estrictamente con la Ley de Protección de Datos Personales del Perú."
+      />
+
+      <FAQItem
+        question="¿Qué tan precisa es la inteligencia artificial de SafeMap?"
+        answer="Nuestros algoritmos de IA tienen una precisión del 98% en la predicción de zonas de riesgo y un 95% de efectividad en la optimización de rutas seguras. El sistema mejora continuamente con cada reporte y utiliza machine learning para adaptarse a los patrones cambiantes de seguridad en tiempo real."
+      />
+
+      <FAQItem
+        question="¿SafeMap funciona sin conexión a internet?"
+        answer="SafeMap tiene funcionalidades limitadas sin conexión. Puedes ver tu ubicación actual y usar rutas previamente descargadas, pero no recibirás actualizaciones en tiempo real ni podrás enviar nuevos reportes. Para la experiencia completa, recomendamos mantener una conexión a internet activa."
+      />
+
+      <FAQItem
+        question="¿Cómo verifica SafeMap que los reportes son reales?"
+        answer="Utilizamos un sistema de verificación cruzada que incluye: análisis de patrones temporales y geográficos, verificación comunitaria donde múltiples usuarios pueden confirmar incidentes, y algoritmos de detección de spam. Los reportes falsos son filtrados automáticamente y los usuarios que reporten información falsa pueden ser limitados."
+      />
+
+      <FAQItem
+        question="¿SafeMap está disponible en mi ciudad?"
+        answer="Actualmente SafeMap está disponible en Lima, Arequipa, Trujillo y Cusco, con planes de expansión a 15 ciudades adicionales durante 2024. Si tu ciudad no está disponible aún, puedes registrarte en nuestra lista de espera para ser notificado cuando lancemos en tu área."
+      />
+
+      <FAQItem
+        question="¿Cuál es la diferencia entre la versión gratuita y premium?"
+        answer="La versión gratuita incluye reportes básicos, visualización de mapas de calor y rutas seguras estándar. SafeMap Premium añade: alertas push personalizadas, rutas optimizadas avanzadas, estadísticas detalladas de tu área, acceso prioritario a nuevas funciones y soporte técnico preferencial. El costo es de S/. 9.90 mensuales."
+      />
+
+      <FAQItem
+        question="¿Cómo puedo reportar un incidente de manera segura?"
+        answer="Para reportar un incidente: 1) Abre SafeMap, 2) Toca el botón 'Reportar' en la pantalla principal, 3) Selecciona el tipo de incidente, 4) Opcionalmente añade detalles (todo anónimo), 5) Confirma la ubicación, 6) Envía el reporte. Todo el proceso toma menos de 30 segundos y tu identidad permanece completamente protegida."
+      />
+
+      <FAQItem
+        question="¿SafeMap funciona para empresas y organizaciones?"
+        answer="Sí, ofrecemos SafeMap Business para empresas que quieren proteger a sus empleados y visitantes. Incluye tableros de control personalizados, reportes detallados, integración con sistemas de seguridad corporativa y API para desarrolladores. Contacta nuestro equipo de ventas para una demo personalizada."
+      />
+
+      <FAQItem
+        question="¿Qué hago en caso de una emergencia real?"
+        answer="SafeMap NO reemplaza los servicios de emergencia oficiales. En caso de emergencia real, llama inmediatamente al 105 (Policía), 116 (Bomberos) o 117 (SAMU). SafeMap incluye un botón de pánico que puede activar estos servicios automáticamente mientras comparte tu ubicación, pero siempre prioriza contactar directamente a las autoridades."
+      />
+
+    </div>
+
+    <!-- Additional Help -->
+    <div class="mt-16 bg-gray-50 rounded-2xl p-8 text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">
+        ¿No encontraste la respuesta que buscabas?
+      </h3>
+      <p class="text-gray-600 mb-6">
+        Nuestro equipo de soporte está disponible 24/7 para ayudarte con cualquier duda o problema.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+          Contactar Soporte
+        </button>
+        <button class="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-all duration-300">
+          Ver Documentación
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

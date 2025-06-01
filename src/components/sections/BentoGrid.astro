@@ -1,0 +1,214 @@
+---
+import BentoCard from '@/components/cards/BentoCard.astro';
+import StatsCounter from '@/components/interactive/StatsCounter';
+---
+
+<section id="impacto" class="py-24 bg-gray-50 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 animate-on-scroll-trigger blurred-fade">
+      <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-6" data-delay="0">
+        Impacto Real en la Comunidad
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-delay="200">
+        Más de 50,000 ciudadanos ya confían en SafeMap para navegar de forma segura por Lima y el Callao.
+      </p>
+    </div>
+    
+    <!-- Bento Grid Layout - Asimétrico -->
+    <div class="bento-grid grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 section-spacing h-auto lg:h-[600px] animate-on-scroll-trigger blurred-fade" data-delay="400">
+        <!-- Impacto Real - Ocupa 2 filas -->
+      <div class="lg:row-span-2 min-h-[400px] lg:min-h-full">
+        <BentoCard 
+          title="Impacto Real"
+          subtitle="Transformando la seguridad ciudadana"
+          class="h-full bg-gradient-to-br from-emerald-500 to-teal-600 text-white relative"
+        >
+          <div class="flex-1 flex flex-col justify-between p-6 relative">
+            <!-- Estadísticas principales -->
+            <div class="grid grid-cols-2 gap-6 mb-6">
+              <div class="text-center">
+                <div class="text-3xl lg:text-4xl font-bold mb-2">
+                  <StatsCounter client:load />
+                </div>
+                <div class="text-sm lg:text-base opacity-90">Reportes procesados</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl lg:text-4xl font-bold mb-2">87%</div>
+                <div class="text-sm lg:text-base opacity-90">Reducción de delitos</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl lg:text-4xl font-bold mb-2">156K</div>
+                <div class="text-sm lg:text-base opacity-90">Usuarios activos</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl lg:text-4xl font-bold mb-2">24/7</div>
+                <div class="text-sm lg:text-base opacity-90">Monitoreo continuo</div>
+              </div>
+            </div>
+
+            <!-- Indicadores de impacto -->
+            <div class="space-y-4">
+              <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium">Zonas más seguras</span>
+                  <span class="text-lg font-bold">+76%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-white rounded-full h-2 w-3/4"></div>
+                </div>
+              </div>
+              
+              <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium">Tiempo de respuesta</span>
+                  <span class="text-lg font-bold">-45%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-white rounded-full h-2 w-2/3"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Indicador de tiempo real -->
+            <div class="flex items-center justify-center mt-6 pt-4 border-t border-white/20">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 bg-green-300 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium">Datos actualizándose en tiempo real</span>
+              </div>
+            </div>
+          </div>
+        </BentoCard>
+      </div>
+      <!-- Reportes Anónimos - Fila 1, Columna 2 -->
+      <div class="min-h-[200px] lg:min-h-full">
+        <BentoCard 
+          title="Reportes Anónimos"
+          subtitle="100% confidencial y seguro"
+          class="h-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white"
+        >
+          <div class="flex-1 flex flex-col justify-center items-center text-center p-6">
+            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
+              </svg>
+            </div>
+            <p class="text-sm opacity-90 leading-relaxed">
+              Tu identidad está protegida. Reporta incidentes sin temor 
+              con nuestro sistema de anonimización avanzado.
+            </p>
+          </div>
+        </BentoCard>
+      </div>
+
+      <!-- IA Avanzada - Fila 1, Columna 3 -->
+      <div class="min-h-[200px] lg:min-h-full">
+        <BentoCard 
+          title="IA Avanzada"
+          subtitle="Rutas inteligentes y predicción"
+          class="h-full bg-gradient-to-br from-orange-500 to-red-500 text-white"
+        >
+          <div class="flex-1 flex flex-col justify-center items-center text-center p-6">
+            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <p class="text-sm opacity-90 leading-relaxed">
+              Algoritmos de machine learning analizan patrones de criminalidad 
+              para sugerir las rutas más seguras en tiempo real.
+            </p>
+          </div>
+        </BentoCard>
+      </div>      <!-- Construyendo Comunidades Seguras - Fila 2, Columnas 2-3 -->
+      <div class="lg:col-span-2 min-h-[200px] lg:min-h-full">
+        <BentoCard 
+          title="Construyendo Comunidades Seguras"
+          subtitle="La unión hace la fuerza en seguridad ciudadana"
+          class="h-full bg-gradient-to-r from-pink-500 to-violet-600 text-white"
+        >
+          <div class="flex-1 flex flex-col lg:flex-row items-center gap-6 p-6">
+            <!-- Sección izquierda: Estadísticas de comunidad -->
+            <div class="flex-1 space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div class="text-2xl font-bold mb-1">2,847</div>
+                  <div class="text-xs opacity-90">Redes vecinales activas</div>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div class="text-2xl font-bold mb-1">98%</div>
+                  <div class="text-xs opacity-90">Se sienten más seguros</div>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div class="text-2xl font-bold mb-1">156K</div>
+                  <div class="text-xs opacity-90">Ciudadanos conectados</div>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div class="text-2xl font-bold mb-1">24/7</div>
+                  <div class="text-xs opacity-90">Vigilancia colaborativa</div>
+                </div>
+              </div>
+              
+              <!-- Características de la comunidad -->
+              <div class="space-y-2 text-sm">
+                <div class="flex items-center space-x-2">
+                  <div class="w-2 h-2 bg-white rounded-full"></div>
+                  <span>Alertas comunitarias instantáneas</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <div class="w-2 h-2 bg-white rounded-full"></div>
+                  <span>Coordinación con autoridades locales</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <div class="w-2 h-2 bg-white rounded-full"></div>
+                  <span>Eventos de seguridad comunitaria</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sección derecha: Elemento visual -->
+            <div class="relative -top-9 flex flex-col items-center space-y-3">
+              <div class="relative">
+                <!-- Círculo principal con icono de comunidad -->
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16,4C18.21,4 20,5.79 20,8C20,10.21 18.21,12 16,12C13.79,12 12,10.21 12,8C12,5.79 13.79,4 16,4M16,13.54C18.81,13.66 22,14.46 22,16V18H17V16C17,15.31 16.81,14.67 16.46,14.12C16.31,13.76 16.13,13.63 16,13.54M8,4C10.21,4 12,5.79 12,8C12,10.21 10.21,12 8,12C5.79,12 4,10.21 4,8C4,5.79 5.79,4 8,4M8,13C10.67,13 16,14.33 16,17V20H0V17C0,14.33 5.33,13 8,13Z"/>
+                  </svg>
+                </div>
+                <!-- Círculos más pequeños alrededor -->
+                <div class="absolute -top-2 -right-2 w-6 h-6 bg-white/30 rounded-full animate-pulse"></div>
+                <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-white/30 rounded-full animate-pulse"></div>
+                <div class="absolute top-1/2 -left-4 w-3 h-3 bg-white/30 rounded-full animate-pulse"></div>
+              </div>
+              
+              <div class="text-center">
+                <div class="text-sm font-medium opacity-90">Juntos construimos</div>
+                <div class="text-xs opacity-75">el futuro más seguro</div>
+              </div>
+            </div>
+          </div>
+        </BentoCard>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-12 clear-both">
+      <div class="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          ¿Listo para hacer tu ciudad más segura?
+        </h3>
+        <p class="text-gray-600 mb-6">
+          Únete a miles de ciudadanos que ya están construyendo comunidades más seguras.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#demo" class="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-center inline-block">
+            Probar Demo Interactiva
+          </a>
+          <a href="#precios" class="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 inline-block text-center">
+            Descargar App
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

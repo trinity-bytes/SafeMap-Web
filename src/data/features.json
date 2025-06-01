@@ -1,0 +1,68 @@
+[
+  {
+    "icon": "🧠",
+    "title": "Inteligencia Artificial Avanzada",
+    "description": "Algoritmos de machine learning analizan patrones de criminalidad en tiempo real para sugerir las rutas más seguras basadas en datos históricos y actuales.",
+    "features": [
+      "Análisis predictivo de riesgos",
+      "Optimización de rutas en tiempo real",
+      "Aprendizaje continuo del sistema"
+    ],
+    "gradient": "from-blue-500 to-indigo-600"
+  },
+  {
+    "icon": "🔒",
+    "title": "Reportes 100% Anónimos",
+    "description": "Sistema de anonimización multicapa que protege tu identidad mientras contribuyes a la seguridad de tu comunidad de manera completamente confidencial.",
+    "features": [
+      "Encriptación de extremo a extremo",
+      "Sin rastreo de ubicación personal",
+      "Datos anonimizados automáticamente"
+    ],
+    "gradient": "from-emerald-500 to-teal-600"
+  },
+  {
+    "icon": "📡",
+    "title": "Monitoreo en Tiempo Real",
+    "description": "Seguimiento continuo de incidentes y actualizaciones instantáneas del mapa de calor para mantenerte informado de los cambios en tu entorno.",
+    "features": [
+      "Alertas push instantáneas",
+      "Mapas de calor dinámicos",
+      "Cobertura 24/7"
+    ],
+    "gradient": "from-purple-500 to-pink-600"
+  },
+  {
+    "icon": "👥",
+    "title": "Impulsado por la Comunidad",
+    "description": "La fuerza de SafeMap viene de su comunidad. Cada reporte contribuye a crear un ambiente más seguro para todos los ciudadanos.",
+    "features": [
+      "Red colaborativa de usuarios",
+      "Verificación comunitaria",
+      "Gamificación responsable"
+    ],
+    "gradient": "from-orange-500 to-red-500"
+  },
+  {
+    "icon": "📱",
+    "title": "Multiplataforma y Accesible",
+    "description": "Disponible en iOS, Android y web. Interfaz intuitiva diseñada para ser utilizada por personas de todas las edades y niveles tecnológicos.",
+    "features": [
+      "Compatibilidad universal",
+      "Diseño inclusivo y accesible",
+      "Sincronización automática"
+    ],
+    "gradient": "from-cyan-500 to-blue-600"
+  },
+  {
+    "icon": "🚨",
+    "title": "Integración con Emergencias",
+    "description": "Conexión directa con servicios de emergencia locales y sistema de alertas que puede activar respuesta rápida cuando sea necesario.",
+    "features": [
+      "Botón de pánico integrado",
+      "Geolocalización de emergencias",
+      "Coordinación con autoridades"
+    ],
+    "gradient": "from-red-500 to-rose-600"
+  }
+]

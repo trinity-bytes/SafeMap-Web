@@ -1,0 +1,6 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" fill="#047857"/>
+  <circle cx="100" cy="80" r="35" fill="#ffffff"/>
+  <ellipse cx="100" cy="160" rx="50" ry="35" fill="#ffffff"/>
+  <text x="100" y="185" text-anchor="middle" fill="#047857" font-family="Arial, sans-serif" font-size="12" font-weight="bold">General</text>
+</svg>

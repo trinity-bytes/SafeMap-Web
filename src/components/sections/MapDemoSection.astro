@@ -1,0 +1,56 @@
+---
+import MapPreview from '@/components/interactive/MapPreview';
+---
+
+<section id="demo" class="py-24 bg-white relative z-0">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 animate-on-scroll-trigger blurred-fade">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-delay="0">
+        Mapa Interactivo en Tiempo Real
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-delay="200">
+        Visualiza zonas de riesgo, rutas seguras y reportes ciudadanos actualizados cada 30 segundos para una navegación inteligente y segura.
+      </p>
+    </div>
+    
+    <!-- Interactive Map Container -->
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden relative mb-16 animate-on-scroll-trigger blurred-fade" data-delay="400">
+      <div class="h-[500px] lg:h-[600px] relative">
+        <div class="absolute inset-0">
+          <MapPreview client:only="react" />
+        </div>
+      </div>
+    </div>
+    
+    <!-- Demo Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll-trigger blurred-fade" data-delay="600">
+      <!-- Feature 1 - Alertas en Tiempo Real -->
+      <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 group" data-delay="0">
+        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-2xl">🚨</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Alertas en Tiempo Real</h3>
+        <p class="text-gray-600 leading-relaxed">Reportes actualizados cada 30 segundos con datos verificados por la comunidad y autoridades locales.</p>
+      </div>
+      
+      <!-- Feature 2 - Rutas Optimizadas -->
+      <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 group" data-delay="200">
+        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-2xl">🛣️</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Rutas Optimizadas</h3>
+        <p class="text-gray-600 leading-relaxed">Navegación inteligente que evita zonas de alto riesgo utilizando algoritmos avanzados de machine learning.</p>
+      </div>
+      
+      <!-- Feature 3 - Análisis Predictivo -->
+      <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 group" data-delay="400">
+        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-2xl">📊</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Análisis Predictivo</h3>
+        <p class="text-gray-600 leading-relaxed">IA que predice patrones de riesgo basados en datos históricos y tendencias de criminalidad urbana.</p>
+      </div>
+    </div>
+  </div>
+</section>

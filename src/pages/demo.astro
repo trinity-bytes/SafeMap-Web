@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MapDemoClean from '../components/interactive/MapDemoClean';
+---
+
+<BaseLayout title="SafeMap - Demo Interactivo" description="Experimenta SafeMap en acción con nuestro demo interactivo del mapa de seguridad de Lima">
+  <main class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <!-- Header del Demo -->
+    <div class="bg-white/10 backdrop-blur-sm border-b border-white/20">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-4">
+            <a href="/" class="text-white hover:text-blue-400 transition-colors">
+              ← Volver al inicio
+            </a>
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                <span class="text-white font-bold text-sm">S</span>
+              </div>
+              <h1 class="text-xl font-bold text-white">SafeMap Demo</h1>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <span class="text-sm text-white/70">Demo Interactivo</span>
+            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo Container -->
+    <div class="container mx-auto px-4 py-8">      <div class="bg-white rounded-xl shadow-2xl overflow-hidden" style="height: calc(100vh - 200px);">
+        <!-- MapDemo Component -->
+        <MapDemoClean client:only="react" />
+      </div>
+    </div>
+
+    <!-- Información adicional -->
+    <div class="container mx-auto px-4 py-6">
+      <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+        <div class="grid md:grid-cols-3 gap-6 text-white">
+          <div class="text-center">
+            <div class="text-2xl font-bold text-blue-400">9</div>
+            <div class="text-sm text-white/70">Incidentes Simulados</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-green-400">3</div>
+            <div class="text-sm text-white/70">Rutas Seguras</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-yellow-400">Lima</div>
+            <div class="text-sm text-white/70">Ciudad de Prueba</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
