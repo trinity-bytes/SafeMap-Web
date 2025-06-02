@@ -50,9 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (child.classList.contains("blurred-fade")) {
         // Mantener blurred-fade en hijos también
       }
-    });
-    // Remover cualquier animación inmediata SOLO de elementos scroll-trigger
-    if (element.classList.contains("animate-on-scroll-trigger")) {
+    }); // Remover cualquier animación inmediata SOLO de elementos scroll-trigger
+    // NO remover animate-blurred-fade-in del hero section
+    if (
+      element.classList.contains("animate-on-scroll-trigger") &&
+      !element.closest("#inicio")
+    ) {
       element.classList.remove("animate-blurred-fade-in");
     }
 

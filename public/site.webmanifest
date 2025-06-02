@@ -2,22 +2,22 @@
   "name": "SafeMap - Navega Seguro con IA",
   "short_name": "SafeMap",
   "description": "Plataforma móvil de seguridad ciudadana que permite reportar incidentes anónimamente y obtener rutas seguras con IA en tiempo real",
-  "start_url": "/",
+  "start_url": "/SafeMap-Web/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
   "orientation": "portrait-primary",
-  "scope": "/",
+  "scope": "/SafeMap-Web/",
   "lang": "es",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/SafeMap-Web/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/SafeMap-Web/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }

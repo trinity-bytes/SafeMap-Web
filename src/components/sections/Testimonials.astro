@@ -17,13 +17,12 @@ import TestimonialCard from '@/components/cards/TestimonialCard.astro';
 
     <!-- Testimonials Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 fade-in">
-        <!-- Police Chief Testimonial -->
-      <TestimonialCard
+        <!-- Police Chief Testimonial -->      <TestimonialCard
         quote="SafeMap ha revolucionado la manera en que recibimos y procesamos reportes ciudadanos. La información en tiempo real nos permite responder más eficientemente."
         author="Comisario María Elena Vásquez"
         position="Jefa de División de Seguridad Ciudadana"
         organization="Policía Nacional del Perú"
-        avatar="/avatars/police-chief.svg"
+        avatar={`${import.meta.env.BASE_URL}avatars/police-chief.svg`}
         verified={true}
       />
 
@@ -33,7 +32,7 @@ import TestimonialCard from '@/components/cards/TestimonialCard.astro';
         author="Dr. Carlos Mendoza"
         position="Director de Investigación en IA"
         organization="Universidad Nacional de Ingeniería"
-        avatar="/avatars/professor.svg"
+        avatar={`${import.meta.env.BASE_URL}avatars/professor.svg`}
         verified={true}
       />
 
@@ -43,7 +42,7 @@ import TestimonialCard from '@/components/cards/TestimonialCard.astro';
         author="Alcalde Roberto Fernández"
         position="Alcalde Distrital"
         organization="Municipalidad de San Isidro"
-        avatar="/avatars/mayor.svg"
+        avatar={`${import.meta.env.BASE_URL}avatars/mayor.svg`}
         verified={true}
       />
 
@@ -53,7 +52,7 @@ import TestimonialCard from '@/components/cards/TestimonialCard.astro';
         author="Ing. Ana Lucia Torres"
         position="Lead Developer"
         organization="Google Developer Expert"
-        avatar="/avatars/tech-expert.svg"
+        avatar={`${import.meta.env.BASE_URL}avatars/tech-expert.svg`}
         verified={true}
       />
 
@@ -63,7 +62,7 @@ import TestimonialCard from '@/components/cards/TestimonialCard.astro';
         author="Lic. Patricia Ramos"
         position="Presidenta"
         organization="Asociación de Vecinos Unidos"
-        avatar="/avatars/community-leader.svg"
+        avatar={`${import.meta.env.BASE_URL}avatars/community-leader.svg`}
         verified={true}
       />
 
@@ -73,7 +72,7 @@ import TestimonialCard from '@/components/cards/TestimonialCard.astro';
         author="General (r) Eduardo Sánchez"
         position="Ex-Director General"
         organization="Instituto Nacional de Defensa Civil"
-        avatar="/avatars/security-expert.svg"
+        avatar={`${import.meta.env.BASE_URL}avatars/security-expert.svg`}
         verified={true}
       />
 

@@ -40,9 +40,9 @@ const {
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${import.meta.env.BASE_URL}apple-touch-icon.svg`} />
+    <link rel="manifest" href={`${import.meta.env.BASE_URL}site.webmanifest`} />
     
     <!-- Additional SEO Meta Tags -->
     <meta name="robots" content="index, follow" />
@@ -92,10 +92,9 @@ const {
     </script>
   </head>  <body class="font-sans antialiased">
     <slot />
-    
-    <!-- Performance and Animation Scripts -->
-    <script src="/js/animations.js" is:inline></script>
-    <script src="/js/scroll-animations.js" is:inline></script>
+      <!-- Performance and Animation Scripts -->
+    <script src={`${import.meta.env.BASE_URL}js/animations.js`} is:inline></script>
+    <script src={`${import.meta.env.BASE_URL}js/scroll-animations.js`} is:inline></script>
   </body>
 </html>
 
