@@ -1,5 +1,6 @@
 ---
 import FeatureCard from '@/components/cards/FeatureCard.astro';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <section id="caracteristicas" class="py-24 bg-white relative z-0">
@@ -130,8 +131,7 @@ import FeatureCard from '@/components/cards/FeatureCard.astro';
       </p>      <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="#precios" class="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-center">
           Descargar Aplicación
-        </a>
-        <a href="#demo" class="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-all duration-300 text-center inline-block">
+        </a>        <a href={`${baseUrl}demo/`} class="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-all duration-300 text-center inline-block">
           Ver Demo en Vivo
         </a>
       </div>
