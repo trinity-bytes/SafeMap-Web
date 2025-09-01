@@ -1,182 +1,138 @@
-# Página de Aterrizaje SafeMap
+# SafeMap Web (Landing + Demo de Mapa)
 
-> 🚀 **Estado: COMPLETADO** - Página de aterrizaje lista para producción para la plataforma de seguridad móvil SafeMap.
+> Sitio de aterrizaje de SafeMap con un demo de mapa interactivo para Lima.
 
-## 📋 Descripción General del Proyecto
+## 📋 Descripción
 
-SafeMap es un proyecto universitario para una plataforma de seguridad móvil que permite a los ciudadanos reportar incidentes de forma anónima, visualizar zonas de riesgo mediante mapas de calor en tiempo real y obtener rutas seguras utilizando tecnología de IA.
+SafeMap es una plataforma de seguridad ciudadana: reporta incidentes de forma anónima, visualiza zonas de riesgo (mapa/heatmap) y sugiere rutas más seguras.
 
-## 🏗️ Stack Tecnológico
+## 🏗️ Stack
 
-- **Framework**: Astro 5.8.1
-- **Biblioteca UI**: React 18
-- **Estilos**: Tailwind CSS
-- **Lenguaje**: TypeScript
-- **Herramienta de Build**: Vite
-- **Gestor de Paquetes**: npm
+- Astro 5.8.1
+- React 19
+- Tailwind CSS
+- TypeScript
+- Vite (build)
 
-## 📁 Estructura del Proyecto
+## 📁 Estructura
 
 ```text
 SafeMap-Web/
-├── public/                    # Activos estáticos
-│   ├── avatars/              # Avatares para testimonios (SVG)
-│   ├── js/                   # Scripts del lado del cliente
-│   ├── favicon.svg           # Favicon del sitio
-│   ├── apple-touch-icon.svg  # Ícono de app para iOS
-│   ├── robots.txt            # Archivo robots para SEO
-│   └── site.webmanifest     # Manifiesto PWA
+├── public/
+│   ├── avatars/
+│   ├── js/
+│   ├── favicon.svg
+│   ├── apple-touch-icon.svg
+│   ├── robots.txt
+│   └── site.webmanifest
 ├── src/
 │   ├── components/
-│   │   ├── cards/           # Componentes de tarjeta reutilizables
-│   │   ├── interactive/     # Componentes interactivos de React
-│   │   ├── layout/          # Cabecera, Pie de página
-│   │   ├── sections/        # Secciones de la página
-│   │   └── ui/             # Elementos de UI
-│   ├── data/               # Archivos de datos JSON
-│   ├── layouts/            # Diseños de página
-│   ├── pages/              # Páginas Astro
-│   │   └── index.astro     # Página principal, por ejemplo
-│   └── styles/             # CSS Global
-├── .github/
-│   └── workflows/
-│       └── deploy.yml      # Flujo de trabajo para despliegue en GitHub Pages
-├── astro.config.mjs        # Configuración de Astro
-├── tailwind.config.mjs     # Configuración de Tailwind
-├── package.json            # Manifiesto del proyecto
-├── DEPLOYMENT.md           # Guía de despliegue
-└── README.md               # Este archivo
+│   │   ├── cards/
+│   │   ├── interactive/   # Mapas y UI interactiva (React)
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   └── ui/
+│   ├── data/
+│   ├── layouts/
+│   ├── pages/              # index.astro, demo.astro
+│   └── styles/
+├── astro.config.mjs
+├── tailwind.config.mjs
+├── package.json
+├── DEPLOYMENT.md
+└── README.md
 ```
 
-Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se expone como una ruta basada en el nombre de su archivo.
+Astro expone cada archivo de `src/pages/` como una ruta. Los recursos estáticos van en `public/`.
 
-No hay nada especial sobre `src/components/`, pero ahí es donde nos gusta colocar cualquier componente de Astro/React/Vue/Svelte/Preact.
+## 🚀 Inicio Rápido (Windows PowerShell)
 
-Cualquier activo estático, como imágenes, se puede colocar en el directorio `public/`.
+Requisitos: Node.js 18+ y npm.
 
-## 🧞 Comandos
-
-Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
-
-| Comando                   | Acción                                                     |
-| :------------------------ | :--------------------------------------------------------- |
-| `npm install`             | Instala las dependencias                                   |
-| `npm run dev`             | Inicia el servidor de desarrollo local en `localhost:4321` |
-| `npm run build`           | Compila tu sitio para producción en `./dist/`              |
-| `npm run preview`         | Previsualiza tu compilación localmente, antes de desplegar |
-| `npm run astro ...`       | Ejecuta comandos CLI como `astro add`, `astro check`       |
-| `npm run astro -- --help` | Obtiene ayuda usando el CLI de Astro                       |
-
-## ✨ Características Implementadas
-
-### 🎨 Diseño y Experiencia de Usuario
-
-- Diseño moderno y responsivo con enfoque "mobile-first"
-- Diseño de Cuadrícula Bento interactiva mostrando características clave
-- Animaciones y transiciones de desplazamiento suaves
-- Esquema de colores y tipografía profesional
-
-### 🧩 Componentes Interactivos
-
-- **MapDemo**: Maqueta de mapa interactivo con marcadores de incidentes y rutas seguras
-- **StatsCounter**: Visualización animada de estadísticas en tiempo real
-- **ContactForm**: Formulario completo de registro para beta con validación
-
-### 📱 Secciones
-
-- **Hero**: Propuesta de valor principal con llamada a la acción
-- **Features**: Seis características clave de la plataforma con iconos
-- **Testimonials**: Respaldo de autoridades y expertos en seguridad
-- **Pricing**: Estructura de precios de tres niveles
-- **FAQ**: Preguntas frecuentes detalladas
-- **Footer**: Información completa del sitio y enlaces
-
-### 🔧 Características Técnicas
-
-- **Optimizado para SEO**: Meta tags, datos estructurados, sitemap
-- **Listo para PWA**: Manifiesto de aplicación web y capacidades offline
-- **Rendimiento**: División de código (code splitting), carga diferida (lazy loading), paquetes optimizados
-- **Accesibilidad**: Cumple con WCAG 2.1 AA
-- **TypeScript**: Seguridad de tipos completa en todo el proyecto
-
-## 🚀 Inicio Rápido
-
-### Prerrequisitos
-
-- Node.js 18+
-- npm o yarn
-
-### Instalación
-
-```bash
-# Clona el repositorio
-git clone https://github.com/trinity-bytes/SafeMap-Web.git
-cd SafeMap-Web
-
-# Instala las dependencias
+```powershell
+# Instala dependencias
 npm install
 
-# Inicia el servidor de desarrollo
+# Levanta el servidor de desarrollo (por defecto http://localhost:4321)
 npm run dev
 ```
 
-### Scripts Disponibles
+Si `npm run dev` falla (Exit Code 1), revisa “Solución de Problemas”.
 
-```bash
-npm run dev          # Inicia el servidor de desarrollo
-npm run build        # Compila para producción
-npm run preview      # Previsualiza la compilación de producción
-npm run astro        # Ejecuta comandos CLI de Astro
+## 🧞 Scripts
+
+| Comando            | Descripción                          |
+| ------------------ | ------------------------------------ |
+| npm run dev        | Servidor de desarrollo               |
+| npm run build      | Compila a producción en ./dist       |
+| npm run preview    | Sirve ./dist para verificación local |
+| npm run lint       | Linter (ESLint)                      |
+| npm run lint:fix   | Linter con autofix                   |
+| npm run format     | Formatea con Prettier                |
+| npm run type-check | Chequeo de tipos (Astro + TS)        |
+| npm run astro …    | CLI de Astro (add, check, etc.)      |
+
+## 🗺️ Demo del Mapa
+
+- Página: `src/pages/demo.astro` → ruta `/demo`.
+- Componente principal: `src/components/interactive/MapDemoClean.tsx`.
+- Estilos Leaflet: `src/styles/leaflet-custom.css` (importado desde `global.css`).
+
+Modos soportados: incidentes con marcadores, heatmap (círculos) y rutas seguras (polylines). Selector de proveedor de mapa (OSM, satélite, oscuro) y simulación de ubicación del usuario.
+
+### Nota sobre un bug histórico de marcadores “flotantes”
+
+Se corrigió un problema donde los marcadores se desplazaban al hacer zoom porque `.leaflet-marker-icon` tenía animaciones con `transform`. Leaflet usa `transform` para posicionar; si lo animas, “rompe” el anclaje a coordenadas.
+
+- Fix aplicado en `src/styles/leaflet-custom.css`: se retiró la animación del contenedor.
+- Si necesitas animaciones, aplícalas a un elemento hijo dentro del HTML del `DivIcon` (no al contenedor `.leaflet-marker-icon`).
+
+## 🔧 Solución de Problemas
+
+1. “npm run dev” no arranca o puerto ocupado (4321)
+
+```powershell
+# Ver el proceso que usa el puerto 4321
+$pid = (Get-NetTCPConnection -LocalPort 4321).OwningProcess
+Get-Process -Id $pid
+
+# Matarlo si es necesario
+Stop-Process -Id $pid -Force
+
+# Reiniciar el dev server
+npm run dev
+```
+
+1. Cerrar el servidor de desarrollo
+
+- En la terminal donde corre: Ctrl + C (confirma si te lo pide).
+- En VS Code: Terminal → ícono de papelera (Terminate) o “Tasks: Terminate Running Task”.
+
+1. Dependencias corruptas
+
+```powershell
+Remove-Item -Recurse -Force node_modules; Remove-Item -Force package-lock.json
+npm install
+npm run dev
 ```
 
 ## 🌐 Despliegue
 
-El proyecto está listo para producción y se puede desplegar en:
-
-- **Netlify** (Recomendado)
-- **Vercel**
-- **GitHub Pages**
-- **Servidor personalizado**
-
-Consulta `DEPLOYMENT.md` para instrucciones detalladas de despliegue.
-
-## 📊 Rendimiento
-
-- **Tamaño del Paquete**: ~200KB gzipped
-- **Puntuación Lighthouse**: 95-100 en todas las métricas
-- **First Contentful Paint**: <1.5s
-- **Time to Interactive**: <3.5s
-
-## 🎓 Proyecto Universitario
-
-Esta página de aterrizaje fue desarrollada como parte de un proyecto universitario para el curso "Diseño y Patrones de Software", demostrando:
-
-- Prácticas modernas de desarrollo web
-- Arquitectura basada en componentes
-- Técnicas de optimización del rendimiento
-- Cumplimiento de accesibilidad
-- Documentación profesional
-
-## 📚 Documentación
-
-- `DEPLOYMENT.md` - Guía de despliegue completa
-- `PROJECT-COMPLETION.md` - Informe detallado de finalización del proyecto (si existe)
-- Documentación de componentes dentro de los archivos fuente
+Guía en `DEPLOYMENT.md`. Funciona bien en proveedores como Netlify, Vercel o un servidor propio.
 
 ## 🤝 Contribuciones
 
-Este es un proyecto universitario, pero los comentarios y sugerencias son bienvenidos:
+Sugerencias bienvenidas:
 
-1. Haz un fork del repositorio
-2. Crea una rama para tu característica (`git checkout -b feature/AmazingFeature`)
-3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Haz push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork
+2. Rama: `feature/mi-cambio`
+3. Commit: `feat: descripción breve`
+4. Push y Pull Request
 
 ## 📄 Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+MIT — ver `LICENSE`.
 
 ---
 
-**Construido con ❤️ usando Astro, React, TypeScript y Tailwind CSS**
+Hecho con Astro, React, TypeScript y Tailwind CSS.
