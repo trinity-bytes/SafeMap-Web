@@ -34,9 +34,11 @@
 }
 
 /* Custom marker animations */
-.leaflet-marker-icon {
-  animation: markerPulse 2s infinite;
-}
+/* IMPORTANT: Do not animate/transform the marker container itself, as Leaflet
+  uses CSS transforms on .leaflet-marker-icon to position markers. Animating
+  this element (e.g., scale) will override Leaflet's transform and cause
+  markers to drift when zooming or panning. If you want a pulse effect,
+  animate a child element inside your custom icon HTML instead. */
 
 @keyframes markerPulse {
   0% {
